@@ -1,6 +1,6 @@
 // src/pages/Login.js
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Login = ({ setToken, setUserId }) => {
   const [email, setEmail] = useState('');
@@ -49,9 +49,11 @@ const Login = ({ setToken, setUserId }) => {
         />
         <button type="submit">Login</button>
       </form>
+      <p>
+        Don't have an account? <Link to="/register">Register here</Link>
+      </p>
     </div>
   );
 };
 
 export default Login;
-
